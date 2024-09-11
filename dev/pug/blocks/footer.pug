@@ -1,0 +1,40 @@
+footer.footer
+  svg(version="1.1" xmlns="//www.w3.org/2000/svg" xmlns:xlink="//www.w3.org/1999/xlink" style="display:none;")
+    defs
+      filter(id="stroke-text-svg-filter")
+        feMorphology(operator="dilate" radius="2")
+        feComposite(operator="xor" in="SourceGraphic")
+
+  .overlay.jsModalRegistration
+    .overlay__shadow.jsCloseOverlay
+    .modal
+      .modal__header
+        .modal__title Регистрация
+        .modal__close.jsCloseOverlay
+          svg(width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M22.0014 8L16 14L10 8L8 10L14 16L8 22L10 24L16 18L22.0014 24L24.0014 22L18.0014 16L24.0014 10L22.0014 8Z" fill="#F0F0F0")
+
+      .modal__body
+        form.jsFormRegistration
+          fieldset.fieldset.fieldset-name.jsFieldsetName
+            input(type="text" name="Имя" placeholder="Имя").input.input--text.jsInputName
+            span.error *пожалуйста, используйте только буквы в поле "Имя"
+
+          fieldset.fieldset.fieldset-site
+            input(type="text" name="Сайт компании" placeholder="Сайт компании").input.input--site.jsInputSite
+
+          fieldset.fieldset.fieldset-phone.jsFieldsetPhone
+            input(type="tel" name="Телефон" placeholder="Телефон").input.input--phone.jsInputPhone
+            span.error *введите корректный телефон (пример: 79000000000)
+            
+          fieldset.fieldset.fieldset-submit
+            button(name="submit").input.input--text.btn.btn--submit.btn.btn--submit Получить код
+
+          fieldset.fieldset.fieldset-politic.jsFieldsetPolitic
+            input(type="checkbox" id="registration--politic" name="registration--politic").checkbox.checkbox--politic
+            label(for="registration--politic")
+              span Отправляя сведения через электронную форму, вы даете согласие на обработку персональных данных, в том числе сбор, хранение и передачу третьим лицам представленной вами информации на условиях Политики обработки персональных данных.
+              span.error *необходимо согласие
+      .modal__aftersend Поздравляем!
+        br
+        | Ваше успешно зарегистрированы

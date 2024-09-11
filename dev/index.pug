@@ -1,0 +1,51 @@
+extends ./pug/base/layout
+
+block header
+  include ./pug/blocks/header
+block main
+  main.grid
+    .container
+      h1.h1
+        span черная
+          .suspension.suspension--left
+          .suspension.suspension--right
+        | пятница
+        .label
+      .offer
+        p.offer__detail Воспользуйтесь выгодными предложениями от Roistat в ноябре*
+        button.btn.btn--arrow.jsOpenModalRegistration
+          | Получить выгоду
+          i.arrow
+        p.offer__descr *Акция не распространяется на подключение опций, лимитов, которые были подключены ранее до 1.11.2023 Количество предложений ограничено
+
+    .ribbons
+      .ribbon__item.ribbon--top
+        .ribbon__wrapper
+          .ribbon__text
+            | 2023&nbsp;&nbsp;black friday
+          i
+          .ribbon__text
+            | 2023&nbsp;&nbsp;black friday
+          i
+          .ribbon__text
+            | 2023&nbsp;&nbsp;black friday
+          i
+          .ribbon__text
+            | 2023&nbsp;&nbsp;black friday
+          i
+      .ribbon__item.ribbon--down
+        .ribbon__wrapper
+          .ribbon__text
+            | 2023&nbsp;&nbsp;black friday
+          i
+          .ribbon__text
+            | 2023&nbsp;&nbsp;black friday
+          i
+          .ribbon__text
+            | 2023&nbsp;&nbsp;black friday
+          i
+          .ribbon__text
+            | 2023&nbsp;&nbsp;black friday
+          i
+
+  include ./pug/blocks/footer

@@ -1,0 +1,75 @@
+.overlay
+  position fixed
+  left 0
+  top 0
+  z-index 10
+  width 100%
+  height 100%
+  display flex
+  justify-content center
+  align-items center
+  transform: translateY(-100%)
+  opacity 0
+  transition: $middle
+  &__shadow
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    cursor pointer
+    background rgba(0,0,0,.4)
+    backdrop-filter: blur(10px)
+    cursor pointer
+    z-index -1
+    transition: $middle
+    &:hover
+      background rgba(0,0,0,.3)
+      backdrop-filter: blur(8px)
+
+.modal
+  border-radius: 24px
+  box-shadow: inset 14.22px 15.23px 43.67px 0px rgba(194, 194, 194, 0.05),0px 65px 130px -5.08px rgba(0, 0, 0, 0.05)
+  backdrop-filter: blur(31.48px)
+  background: rgba(29, 29, 29, 0.8)
+  width: 500px
+  padding 40px
+  position relative
+  transition: .5s .3s ease all
+  transform: translateY(-75%)
+  +media(720px)
+    border-radius: 0
+    height 100%
+    width 100%
+    padding 25px
+    overflow-y: auto
+  &__title
+    font-size 40px
+    line-height 44px
+    font-weight 600
+    color $white
+    +media(720px)
+      font-size: 28px
+      line-height 30px
+  &__close
+    position absolute
+    right 40px
+    top 40px
+    cursor pointer
+    transition: $fast
+    &:hover
+      transform: scale(1.1)
+  &__body
+    &.collapse
+      display none
+
+.modal__aftersend
+  margin-top 30px
+  line-height 1.5
+  display none
+
+.jsIsShow
+  opacity 1
+  transform: translate(0)
+  .modal
+    transform: translate(0)
