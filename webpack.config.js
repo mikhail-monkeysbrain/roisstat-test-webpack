@@ -18,6 +18,9 @@ const PATHS = {
 };
 
 let conf = {
+  optimization: {
+    minimize: false
+ },
   entry: {
     main: PATHS.dev + "main.js",
   },
